@@ -5,8 +5,9 @@ Build image locally:
 podman build -t ytldp_app .
 ```
 
+Run container:
 ```sh
-Run: podman-compose up -d
+podman-compose up -d
 ```
 
 ## TODO:
