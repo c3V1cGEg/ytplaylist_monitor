@@ -1,0 +1,16 @@
+#podman build -t ytldp_app .
+version: "0.1"
+services:
+    youtube_autodl_app:
+      image: localhost/ytldp_app:latest
+      restart: always
+      mem_limit: 1000m
+      container_name: ytldp_app
+      working_dir: /app
+      environment:
+          - AUDIO_PLAYLIST_ID=<yt_playlist_id>
+          - VIDEO_PLAYLIST_ID=<yt_playlist_id>
+      volumes:
+          - <audio_download_path>:/app/downloads/audio
+          - <video_download_path>:/app/downloads/video
+          - <config_path>:/app/config
