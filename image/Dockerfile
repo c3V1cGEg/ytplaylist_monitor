@@ -1,4 +1,4 @@
-FROM alpine:3.16
+FROM alpine:3.17
 RUN mkdir -p /app/downloads/audio && mkdir -p /app/downloads/video && mkdir -p /app/config
 COPY download_audio.sh download_video.sh start_cron.sh crontab /app/
 RUN apk update && apk add bash yt-dlp ffmpeg 
